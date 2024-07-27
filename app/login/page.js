@@ -1,16 +1,16 @@
-'use client'
+'use client';
 
 import Layout from "../layout";
 import Image from "next/image";
 import Logo from '../logo.png';
 import { useSearchParams, useRouter } from "next/navigation";
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import CryptoJS from 'crypto-js';
 import { auth } from '../../components/firebaseConfig';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import Link from "next/link";
 
-export default function Login() {
+function LoginComponent() {
     const searchParams = useSearchParams();
     const router = useRouter();
     const [email, setEmail] = useState('');
@@ -24,7 +24,7 @@ export default function Login() {
             const bytes = CryptoJS.AES.decrypt(searchParams.get("password"), 'djilali');
             setPassword(bytes.toString(CryptoJS.enc.Utf8));
         }
-    }, []);
+    }, [searchParams]);
 
     const validateEmail = (email) => {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -98,5 +98,13 @@ export default function Login() {
                 </div>
             </div>
         </Layout>
+    );
+}
+
+export default function Login() {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <LoginComponent />
+        </Suspense>
     );
 }

@@ -88,6 +88,11 @@ const AddShop = () => {
         }
     };
 
+    // Ensure the code runs only on the client side
+    if (typeof window === 'undefined') {
+        return null;
+    }
+
     return (
         <Layout layoutType="home">
             <Title>Ajouter une nouvelle boutique</Title>

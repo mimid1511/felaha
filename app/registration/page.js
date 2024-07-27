@@ -5,13 +5,13 @@ import Layout from "../layout";
 import Image from "next/image";
 import Logo from '../logo.png';
 import { useSearchParams, useRouter } from "next/navigation";
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import CryptoJS from 'crypto-js';
 import { auth } from '../../components/firebaseConfig';
 import { createUserWithEmailAndPassword, sendEmailVerification, updateProfile } from "firebase/auth";
 import ReCAPTCHA from "react-google-recaptcha";
 
-export default function Register() {
+function RegisterComponent() {
     const searchParams = useSearchParams();
     const router = useRouter();
     const [email, setEmail] = useState('');
@@ -144,5 +144,13 @@ export default function Register() {
                 </div>
             </div>
         </Layout>
+    );
+}
+
+export default function Register() {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <RegisterComponent />
+        </Suspense>
     );
 }
