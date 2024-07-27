@@ -179,6 +179,7 @@ export default function MarketPlace({ searchInput, setSearchInput }) {
                             onChange={handleCategoryChange}
                             className="select select-bordered w-full max-w-xs"
                         >
+                            <option value="" disabled defaultChecked>Catégorie</option>
                             <option value="">Tout</option>
                             {productTypes.map((type, index) => (
                                 <option key={index} value={index}>{type}</option>
