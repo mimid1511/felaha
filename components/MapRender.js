@@ -86,10 +86,10 @@ const MapRender = () => {
 
   return (
     <>
-      <div className='bg-white' style={{ width: '100%', padding: 10 }}>
+      <div className='bg-base-300' style={{ width: '100%', padding: 10 }}>
         <div className="join" style={{ display: 'flex', width: '100%' }}>
           <input className="input text-black join-item input-bordered" style={{ flexGrow: 1 }} placeholder="Rechercher un produit, un producteur..." />
-          <button className="btn join-item btn-neutral">
+          <button className="btn join-item btn-primary">
             <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
               <path fill="currentColor" fillRule="evenodd" d="M14.385 15.446a6.75 6.75 0 1 1 1.06-1.06l5.156 5.155a.75.75 0 1 1-1.06 1.06zm-7.926-1.562a5.25 5.25 0 1 1 7.43-.005l-.005.005l-.005.004a5.25 5.25 0 0 1-7.42-.004" clipRule="evenodd"></path>
             </svg>

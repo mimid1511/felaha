@@ -4,13 +4,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Logo from '../app/logo.png';
 import { useRouter, usePathname } from 'next/navigation';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import CryptoJS from 'crypto-js';
 import { auth, storage } from '../components/firebaseConfig';
 import { ref, getDownloadURL } from "firebase/storage";
 import { signOut, onAuthStateChanged } from 'firebase/auth';
+import { ThemeContext } from '@/context/themeContext';
 
-export default function Navbar({setTheme}) {
+export default function Navbar() {
+    const {changeTheme} = useContext(ThemeContext);
     const router = useRouter();
     const pathname = usePathname()
     const [email, setEmail] = useState('');
@@ -73,7 +75,7 @@ export default function Navbar({setTheme}) {
     };
 
     return (
-        <div className="navbar bg-white sticky top-0 drop-shadow" style={{ zIndex: "1" }}>
+        <div className="navbar bg-base-100 sticky top-0 drop-shadow" style={{ zIndex: "1" }}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -119,7 +121,7 @@ export default function Navbar({setTheme}) {
             </div>
             <div className="navbar-end dropdown-bottom dropdown-end">
                 <label className="swap swap-rotate mr-4">
-                    <input type="checkbox" className="theme-controller" value="synthwave" />
+                    <input type="checkbox" className="theme-controller" value="synthwave" onChange={() => changeTheme()} />
                     <svg
                         className="swap-off w-7 fill-current"
                         xmlns="http://www.w3.org/2000/svg"
@@ -143,7 +145,8 @@ export default function Navbar({setTheme}) {
                             <div className={`w-10 rounded-full ${!user.emailVerified && 'ring ring-offset-2 ring-warning'}`}>
                                 <img
                                     alt="User Avatar"
-                                    src={profilePicture} />
+                                    src={profilePicture}
+                                />
                             </div>
                         </div>
                         <ul

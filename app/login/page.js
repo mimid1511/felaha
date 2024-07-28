@@ -56,9 +56,9 @@ function LoginComponent() {
     };
 
     return (
-        <Layout>
+        <Layout layoutType="login">
             <div className="flex items-center justify-center min-h-screen bg-cover bg-center bg-[url('https://149725886.v2.pressablecdn.com/wp-content/uploads/map_07-28-21_300dpi_19.19x26.89_inv2823c-scaled.jpg')]" >
-                <div className="w-full p-6 border-t-4 border-green-500 rounded-md shadow-xl lg:max-w-lg bg-white bg-opacity-100">
+                <div className="w-full p-6 border-t-4 border-green-500 rounded-md shadow-xl lg:max-w-lg bg-base-300 bg-opacity-100">
                     <div className="flex justify-center mb-8">
                         <Image src={Logo} alt="Logo de Felaha DZ" width={150} height={150} />
                     </div>
@@ -91,9 +91,9 @@ function LoginComponent() {
                             <button type="submit" className="btn btn-block btn-primary">Connexion</button>
                         </div>
                         <br />
-                        <Link href="/forgotPassword" className="text-xs text-gray-600 hover:underline">Mot de passe oublié ?</Link>
+                        <Link href="/forgotPassword" className="text-xs text-gray-500 hover:underline">Mot de passe oublié ?</Link>
                         <br />
-                        <Link href="/registration" className="text-xs text-gray-600 hover:underline">Pas encore inscrit ? S'inscrire !</Link>
+                        <Link href="/registration" className="text-xs text-gray-500 hover:underline">Pas encore inscrit ? S'inscrire !</Link>
                     </form>
                 </div>
             </div>

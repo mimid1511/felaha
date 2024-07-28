@@ -74,9 +74,9 @@ function RegisterComponent() {
     };
 
     return (
-        <Layout>
+        <Layout layoutType="login">
             <div className="flex items-center justify-center min-h-screen bg-cover bg-center bg-[url('https://149725886.v2.pressablecdn.com/wp-content/uploads/map_07-28-21_300dpi_19.19x26.89_inv2823c-scaled.jpg')]">
-                <div className="w-full p-6 border-t-4 border-neutral rounded-md shadow-xl lg:max-w-lg bg-white bg-opacity-100">
+                <div className="w-full p-6 border-t-4 border-neutral rounded-md shadow-xl lg:max-w-lg bg-base-300 bg-opacity-100">
                     <div className="flex justify-center mb-8">
                         <Image src={Logo} alt="Logo de Felaha DZ" width={150} height={150} />
                     </div>
@@ -138,7 +138,7 @@ function RegisterComponent() {
                                 <button type="submit" disabled={!recaptchaValide} className="btn btn-block btn-neutral">S'inscrire</button>
                             </div>
                             <br />
-                            <Link href="/login" className="text-xs text-gray-600 hover:underline">Déja inscrit ? Se connecter !</Link>
+                            <Link href="/login" className="text-xs text-gray-500 hover:underline">Déja inscrit ? Se connecter !</Link>
                         </form>
                     }
                 </div>

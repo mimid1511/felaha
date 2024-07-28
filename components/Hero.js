@@ -42,9 +42,9 @@ export default function Hero({ onSearchSubmit }) {
     return (
         <div className="hero h-44 bg-[url('../app/background-hero.jpg')] bg-cover">
             <div className="hero-overlay bg-opacity-60"></div>
-            <div className="hero-content text-center text-neutral-content">
+            <div className="hero-content text-center">
                 <div className="max-w-md">
-                    <select className="select select-bordered select-sm w-full max-w-xs mb-5 text-black" defaultValue="">
+                    <select className="select select-bordered select-sm w-full max-w-xs mb-5" defaultValue="">
                         <option value="" disabled>Wilaya</option>
                         {wilayas.map((wilaya) => (
                             <option key={wilaya.id} value={wilaya.id}>{`${wilaya.id} - ${wilaya.libelle}`}</option>
@@ -53,7 +53,7 @@ export default function Hero({ onSearchSubmit }) {
                     {!hasSearched &&
                         <div className="join">
                             <input
-                                className="input text-black input-bordered join-item w-96"
+                                className="input text-black input-bordered join-item w-full md:w-3/4 lg:w-1/2"
                                 placeholder="Rechercher un produit, un producteur..."
                                 value={searchInput}
                                 onChange={handleSearchInputChange}

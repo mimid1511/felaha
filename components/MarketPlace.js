@@ -168,7 +168,7 @@ export default function MarketPlace({ searchInput, setSearchInput }) {
     const displayedProducts = products.slice(0, visibleCount);
 
     return (
-        <div className="mx-auto px-4 py-8 bg-[url('../app/background-white.jpg')] bg-repeat bg-contain">
+        <div className="mx-auto px-4 py-8 bg-base-300">
             <div className="mb-6 p-4 bg-base-100 rounded-lg shadow-md flex justify-between items-center">
                 {loadingCategories ? (
                     <div className="skeleton h-8 w-full"></div>
@@ -188,13 +188,13 @@ export default function MarketPlace({ searchInput, setSearchInput }) {
                         <div className="flex items-center">
                             <div className="form-control mr-4">
                                 <label className="label cursor-pointer">
-                                    <input type="radio" name="radio-10" className="radio checked:bg-neutral mr-2" defaultChecked onChange={() => setStatue("offre")} />
+                                    <input type="radio" name="radio-10" className="radio  mr-2" defaultChecked onChange={() => setStatue("offre")} />
                                     <span className="label-text">Offre</span>
                                 </label>
                             </div>
                             <div className="form-control">
                                 <label className="label cursor-pointer">
-                                    <input type="radio" name="radio-10" className="radio checked:bg-neutral mr-2" onChange={() => setStatue("demande")} />
+                                    <input type="radio" name="radio-10" className="radio  mr-2" onChange={() => setStatue("demande")} />
                                     <span className="label-text">Demande</span>
                                 </label>
                             </div>

@@ -63,7 +63,7 @@ const Listing = ({ params }) => {
     return (
         <Layout layoutType="home">
             <Title>{listing?.titre}</Title>
-            <div className="p-8 bg-[url('../app/background-white.jpg')] bg-repeat bg-contain">
+            <div className="p-8 bg-base-300">
                 <div className="bg-base-200 p-8 rounded-lg shadow-lg max-w-3xl mx-auto">
                     {listing ? (
                         <>
@@ -103,7 +103,7 @@ const Listing = ({ params }) => {
                                         className="w-full h-64 object-cover rounded-lg shadow-md"
                                     />
                                 </div>
-                                <p className="text-gray-700 mb-4"><strong>Description : </strong>{listing?.description}</p>
+                                <p className="mb-4"><strong>Description : </strong>{listing?.description}</p>
                                 <div className="stats stats-vertical lg:stats-horizontal shadow mb-4">
                                     <div className="stat">
                                         <div className="stat-title">Statue</div>
@@ -224,9 +224,9 @@ const Listing = ({ params }) => {
                                         }
                                     </div>
                                 </div>
-                                <p className="text-gray-700 mb-4"><strong>Adresse : </strong>{listing?.shop.adresse}, {listing?.shop.commune}, {listing?.shop.wilaya}.</p>
-                                <p className="text-gray-700 mb-4"><strong>Téléphone : </strong>{listing?.shop.phone}</p>
-                                <p className="text-gray-700 mb-1"><strong>Note de la boutique</strong></p>
+                                <p className="mb-4"><strong>Adresse : </strong>{listing?.shop.adresse}, {listing?.shop.commune}, {listing?.shop.wilaya}.</p>
+                                <p className="mb-4"><strong>Téléphone : </strong>{listing?.shop.phone}</p>
+                                <p className="mb-1"><strong>Note de la boutique</strong></p>
                                 <div className="rating mb-8">
                                     <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                                     <input

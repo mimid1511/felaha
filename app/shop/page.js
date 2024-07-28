@@ -48,15 +48,15 @@ const Shop = () => {
     return (
         <Layout layoutType="home">
             <Title>Boutiques</Title>
-            <div className="container mx-auto px-4 py-8 bg-[url('../app/background-white.jpg')] bg-repeat bg-contain">
-                <div className="mb-6 p-4 bg-base-300 rounded-lg shadow-md flex justify-between items-center">
+            <div className="container mx-auto px-4 py-8 bg-base-300">
+                <div className="mb-6 p-4 bg-base-200 rounded-lg shadow-md flex justify-between items-center">
                     {loadingShops ? (
                         <div className="skeleton h-8 w-full"></div>
                     ) : (
                         <div className="flex justify-between w-full">
                             <button 
                                 onClick={handleAddShopClick} 
-                                className="btn btn-sm btn-neutral"
+                                className="btn btn-sm btn-primary"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
                                     <path fill="currentColor" d="M11 13H6q-.425 0-.712-.288T5 12t.288-.712T6 11h5V6q0-.425.288-.712T12 5t.713.288T13 6v5h5q.425 0 .713.288T19 12t-.288.713T18 13h-5v5q0 .425-.288.713T12 19t-.712-.288T11 18z"></path>

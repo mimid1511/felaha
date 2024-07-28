@@ -126,8 +126,8 @@ const EditShop = ({ params }) => {
     return (
         <Layout layoutType="home">
             <Title>{nom}</Title>
-            <div className="p-8 bg-[url('../app/background-dark.jpg')] bg-repeat bg-contain">
-                <div className="bg-white p-8 rounded-lg shadow-lg max-w-3xl mx-auto">
+            <div className="p-8 bg-base-300">
+                <div className="bg-base-100 p-8 rounded-lg shadow-lg max-w-3xl mx-auto">
                     <MapFindPlaceRender
                         wilaya={wilaya}
                         setWilaya={setWilaya}

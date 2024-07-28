@@ -40,7 +40,7 @@ export default function Login() {
     };
 
     return (
-        <Layout>
+        <Layout layoutType="login">
             <div className="flex items-center justify-center min-h-screen bg-cover bg-center bg-[url('https://149725886.v2.pressablecdn.com/wp-content/uploads/map_07-28-21_300dpi_19.19x26.89_inv2823c-scaled.jpg')]">
                 <div className="w-full p-6 border-t-4 border-base-100 rounded-md shadow-xl lg:max-w-lg bg-primary bg-opacity-100">
                     <div className="flex justify-center mb-8">

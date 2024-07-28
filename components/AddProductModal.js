@@ -234,7 +234,7 @@ export default function AddProductModal({user}) {
 
     return (
         <dialog id="add-product-modal" className="modal">
-            <div className="modal-box bg-white w-11/12 max-w-2xl">
+            <div className="modal-box bg-base-100 w-11/12 max-w-2xl">
                 <form method="dialog">
                     <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                 </form>
@@ -254,13 +254,13 @@ export default function AddProductModal({user}) {
                             <div className="mb-4 flex items-center">
                                 <div className="form-control mr-4">
                                     <label className="label cursor-pointer">
-                                        <input type="radio" name="radio-10" className="radio checked:bg-neutral mr-2" defaultChecked onChange={() => setStatue("offre")} />
+                                        <input type="radio" name="radio-10" className="radio mr-2" defaultChecked onChange={() => setStatue("offre")} />
                                         <span className="label-text">Offre</span>
                                     </label>
                                 </div>
                                 <div className="form-control">
                                     <label className="label cursor-pointer">
-                                        <input type="radio" name="radio-10" className="radio checked:bg-neutral mr-2" onChange={() => setStatue("demande")} />
+                                        <input type="radio" name="radio-10" className="radio mr-2" onChange={() => setStatue("demande")} />
                                         <span className="label-text">Demande</span>
                                     </label>
                                 </div>
