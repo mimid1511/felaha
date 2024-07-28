@@ -63,7 +63,7 @@ const Listing = ({ params }) => {
     return (
         <Layout layoutType="home">
             <Title>{listing?.titre}</Title>
-            <div className="p-8 bg-base-300">
+            <div className="p-4 bg-base-300">
                 <div className="bg-base-200 p-8 rounded-lg shadow-lg max-w-3xl mx-auto">
                     {listing ? (
                         <>

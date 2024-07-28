@@ -169,11 +169,11 @@ export default function MarketPlace({ searchInput, setSearchInput }) {
 
     return (
         <div className="mx-auto px-4 py-8 bg-base-300">
-            <div className="mb-6 p-4 bg-base-100 rounded-lg shadow-md flex justify-between items-center">
+            <div className="mb-6 p-4 bg-base-100 rounded-lg shadow-md flex flex-wrap justify-between items-center">
                 {loadingCategories ? (
                     <div className="skeleton h-8 w-full"></div>
                 ) : (
-                    <div className="flex justify-between w-full">
+                    <div className="flex flex-wrap justify-between w-full">
                         <select
                             value={selectedCategory}
                             onChange={handleCategoryChange}

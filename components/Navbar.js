@@ -12,7 +12,7 @@ import { signOut, onAuthStateChanged } from 'firebase/auth';
 import { ThemeContext } from '@/context/themeContext';
 
 export default function Navbar() {
-    const {changeTheme} = useContext(ThemeContext);
+    const { changeTheme } = useContext(ThemeContext);
     const router = useRouter();
     const pathname = usePathname()
     const [email, setEmail] = useState('');
@@ -82,15 +82,21 @@ export default function Navbar() {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a>Item 1</a></li>
-                        <li>
+                        {/* <li>
                             <a>Parent</a>
                             <ul className="p-2">
                                 <li><a>Submenu 1</a></li>
                                 <li><a>Submenu 2</a></li>
                             </ul>
-                        </li>
-                        <li><a>Item 3</a></li>
+                        </li> */}
+                        <li><Link href={"/"}><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M6 19h3v-6h6v6h3v-9l-6-4.5L6 10zm-2 2V9l8-6l8 6v12h-7v-6h-2v6zm8-8.75"></path></svg>Accueil</Link></li>
+                        <li><Link href={"/map"}><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} color="currentColor"><path d="M22 10v-.783c0-1.94 0-2.909-.586-3.512c-.586-.602-1.528-.602-3.414-.602h-2.079c-.917 0-.925-.002-1.75-.415L10.84 3.021c-1.391-.696-2.087-1.044-2.828-1.02S6.6 2.418 5.253 3.204l-1.227.716c-.989.577-1.483.866-1.754 1.346C2 5.746 2 6.33 2 7.499v8.217c0 1.535 0 2.303.342 2.73c.228.285.547.476.9.54c.53.095 1.18-.284 2.478-1.042c.882-.515 1.73-1.05 2.785-.905c.884.122 1.705.68 2.495 1.075M8 2v15m7-12v4.5"></path><path d="M18.308 21.684A1.18 1.18 0 0 1 17.5 22c-.302 0-.591-.113-.808-.317c-1.986-1.87-4.646-3.96-3.349-6.993C14.045 13.05 15.73 12 17.5 12s3.456 1.05 4.157 2.69c1.296 3.03-1.358 5.13-3.349 6.993M17.5 16.5h.009"></path></g></svg>Producteurs et points de vente</Link></li>
+                        <li><Link href={"/news"}><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h11l5 5v11q0 .825-.587 1.413T19 21zm0-2h14V9h-4V5H5zm2-2h10v-2H7zm0-8h5V7H7zm0 4h10v-2H7zM5 5v4zv14z"></path></svg>Actualités</Link></li>
+                        <li><Link href={"/events"}><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h11l5 5v11q0 .825-.587 1.413T19 21zm0-2h14V9h-4V5H5zm2-2h10v-2H7zm0-8h5V7H7zm0 4h10v-2H7zM5 5v4zv14z"></path></svg>Événements</Link></li>
+
+                        {/* <li><Link href={"/login"}>Connexion</Link></li> */}
+                        <Link href={"/login"}><div role="button" className="btn btn-xs btn-block btn-primary mt-1 mb-1">Se connecter</div></Link>
+                        <Link href={"/registration"}><div role="button" className="btn btn-block btn-xs btn-neutral">Inscription</div></Link>
                     </ul>
                 </div>
                 <Link href="/">
@@ -188,8 +194,8 @@ export default function Navbar() {
                     </div>
                 ) : (
                     <>
-                        <Link href="/registration" className="btn btn-neutral m-1">Inscription</Link>
-                        <div className="dropdown">
+                        <Link href="/registration" className="btn btn-neutral m-1 hidden md:flex">Inscription</Link>
+                        <div className="dropdown hidden md:flex">
                             <div tabIndex={0} role="button" className="btn btn-primary m-1">Se connecter</div>
                             <div tabIndex={0} className="dropdown-content z-[1] card card-compact w-75 p-2 shadow-lg bg-primary text-primary-content">
                                 <div className="card-body">

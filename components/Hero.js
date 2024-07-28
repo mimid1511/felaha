@@ -53,7 +53,7 @@ export default function Hero({ onSearchSubmit }) {
                     {!hasSearched &&
                         <div className="join">
                             <input
-                                className="input text-black input-bordered join-item w-full md:w-3/4 lg:w-1/2"
+                                className="input text-black input-bordered join-item w-full"
                                 placeholder="Rechercher un produit, un producteur..."
                                 value={searchInput}
                                 onChange={handleSearchInputChange}
