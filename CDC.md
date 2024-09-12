@@ -1,4 +1,4 @@
-# FELAHA.DZ
+# FELAHA
 
 ## 1. Introduction
 ### Objectif du projet
@@ -6,9 +6,9 @@ Développer une plateforme numérique permettant aux agriculteurs et producteurs
 
 ## 2. Description du Projet
 ### Nom du projet
-FelahaDZ
+Felaha
 ### Description
-FelahaDZ est une plateforme en ligne permettant aux agriculteurs et producteurs en Algérie de commercialiser leurs fruits, légumes, viandes (rouges et blanches), ainsi que du lait et des produits laitiers directement aux consommateurs. La plateforme vise à offrir plus de visibilité aux producteurs et à garantir des produits de qualité à des prix justes pour les consommateurs.
+Felaha est une plateforme en ligne permettant aux agriculteurs et producteurs en Algérie de commercialiser leurs fruits, légumes, viandes (rouges et blanches), ainsi que du lait et des produits laitiers directement aux consommateurs. La plateforme vise à offrir plus de visibilité aux producteurs et à garantir des produits de qualité à des prix justes pour les consommateurs.
 ## 3. Objectifs du Projet
 Faciliter la vente directe des produits agricoles sans intermédiaires.
 Promouvoir la transparence et la traçabilité des produits alimentaires.
